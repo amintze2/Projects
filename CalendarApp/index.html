@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calendar App</title>
+    
+        <link rel="stylesheet" href="style.css">
+      </head>
+<body>
+
+    <div id = "container">
+        <div id = "header">
+            <div>
+                <span id="monthDisplay"></span>
+                <span id="emoji"></span>
+                <span id="yearDisplay"></span>
+
+            </div>
+        </div>
+        <div > 
+            <button id="monthButton" class= "navButton">Month</button>
+            <button id="weekButton" class= "navButton">Week</button>
+            
+        </div>
+        <div>
+            <button id = "nextButton" class= "navButton" > &#8680;</button>
+            <button id = "todayButton" class= "navButton" > Today </button>
+            <button id = "backButton"  class= "navButton" > &#8678; </button>
+        </div>
+        <div id = "weekdays">
+            <div>Sunday</div>
+            <div>Monday</div>
+            <div>Tuesday</div>
+            <div>Wednesday</div>
+            <div>Thursday</div>
+            <div>Friday</div>
+            <div>Saturday</div>
+
+        </div>
+        <div id = "calendar"></div>
+
+    </div>
+    <div id = "dailyEventsView">
+        <h2>Daily View</h2>
+        <div id = eventsList></div>
+        <button id = "addEventButton">Add Event</button>
+        <button id = "dailyViewCancelButton">Cancel</button>
+        
+        <button id = "deleteSingleEvent">Delete Event(s)</button>
+        <button id = "cancelDeleteSingleEvent">Cancel</button>
+      
+    </div>
+    <div id = "newEventModal">
+        <h2>New Event</h2>
+        <input id = "eventTitleInput" placeholder = "Event Title" />
+        <input id = "eventStartTimeInput" placeholder = "Event start time" />
+        <button class = "AMPMbutton" id = "StartAM">AM</button>
+        <button class = "AMPMbutton" id = "StartPM">PM</button>
+        <input id = "eventEndTimeInput" placeholder = "Event end time" />
+        <button class = "AMPMbutton" id = "EndAM" >AM</button>
+        <button class = "AMPMbutton" id = "EndPM" >PM</button>
+        <input id = "eventLocationInput" placeholder = "Event location" />
+        <input id = "eventNotesInput" placeholder = "Event description" />
+        <button id = "saveButton">Save</button>
+        <button id = "cancelButton">Cancel</button>
+    </div>
+
+    <div id = "modalBackDrop"></div>
+    <script src="script.js"></script>
+    
+</body>
+</html>

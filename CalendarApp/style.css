@@ -1,0 +1,326 @@
+body {
+    display: flex;
+    margin-top: 50px;
+    justify-content: left;
+    background-color: #ffffff;
+  }
+  button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    
+  }
+  .AMPMbutton{
+    width: 30px;
+    height: 15px;
+    font-size: 12px; 
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 0px;
+    color: #ffffff;
+    background-color: #a5a5a5;
+  } 
+  .darker{
+    background-color: #1f1f1f; 
+  }
+  .navButton{
+    float: right;
+    width: 25px;
+    padding: 5px 0px;
+    color: #454545;
+    border-radius: 0px;
+    font-weight: lighter;
+    overflow: hidden;
+    background-color: #d7d7d7;
+    height: 30px;
+  }
+  .navButton:hover{
+    background-color:#b8b8b8; 
+  }
+  #header {
+    padding: 10px;
+    color: #454545;
+    font-size: 26px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #b8b8b8;
+  }
+
+  #monthDisplay{
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: normal;
+  }
+  #emoji{
+    font-family: "Times New Roman", Times, serif;
+  }
+  #yearDisplay{
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: lighter;
+  }
+  #header button {
+    background-color:#ffffff;
+    
+  }
+  #header button:hover {
+    background-color:#b8b8b8;  
+  }
+  
+  #todayButton{
+    width: 50px;
+  }
+
+  #monthButton {
+    width: 50px;
+    float: left;
+    
+  }
+
+  #weekButton{
+    width: 50px;
+    float: left;
+  }
+  
+  #container {
+    width: 770px;
+  }
+  #weekdays {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: lighter;
+    width: 100%;
+    display: flex;
+    color: #454545;
+  }
+  #weekdays div {
+    width: 100px;
+    padding: 10px;
+  }
+  #calendar {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .weekViewDay {
+    width: 100px;
+    padding: 10px;
+    height: 400px;
+    cursor: pointer;
+    box-sizing: border-box;
+    background-color: white;
+    margin: 5px;
+    box-shadow: 0px 0px 3px #CBD4C2;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: lighter;
+  }
+  .day {
+    width: 100px;
+    padding: 10px;
+    height: 100px;
+    cursor: pointer;
+    box-sizing: border-box;
+    background-color: white;
+    margin: 5px;
+    box-shadow: 0px 0px 3px #CBD4C2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: lighter;
+  }
+  .day:hover {
+    background-color: #e8faed;
+  }
+  
+  .day + #currentDay {
+    background-color:#e8f4fa;
+  }
+  .weekViewDay:hover {
+    background-color: #e8faed;
+  }
+  
+  .weekViewDay + #currentDay {
+    background-color:#e8f4fa;
+  }
+  .event {
+
+    font-size: 10px;
+    padding: 3px;
+    background-color: #58bae4;
+    color: white;
+    border-radius: 5px;
+    max-height: 55px;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: lighter;
+  }
+  .event.weekView{
+    margin-bottom: 5px; 
+  }
+  .largerEvent {
+    font-size: 10px;
+    margin: 5px;
+    width: 200px;
+    padding: 5px;
+    height: 50px;
+    background-color: #58bae4;
+    color: white;
+    border-radius: 5px;
+    max-height: 50px;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: lighter;
+
+  }
+  .padding {
+    cursor: default !important;
+    background-color: #ffffff !important;
+    box-shadow: none !important;
+  }
+  #dailyEventsView{
+    display: none;
+    z-index: 20;
+    padding: 25px;
+    background-color: #e8f4fa;
+    box-shadow: 0px 0px 3px black;
+    border-radius: 5px;
+    width: 350px;
+    top: 100px;
+    left: calc(50% - 175px);
+    position: absolute;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+
+
+  }
+  #dailyEventsView{
+    display: none;
+    z-index: 20;
+    padding: 25px;
+    background-color: #e8f4fa;
+    box-shadow: 0px 0px 3px black;
+    border-radius: 5px;
+    width: 350px;
+    top: 100px;
+    left: calc(50% - 175px);
+    position: absolute;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+#deleteSingleEvent{
+  background-color: #2c7da5;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+#cancelDeleteSingleEvent{
+  background-color: #c25353;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+  #newEventModal, #deleteEventModal {
+    display: none;
+    z-index: 20;
+    padding: 25px;
+    background-color: #e8f4fa;
+    box-shadow: 0px 0px 3px black;
+    border-radius: 5px;
+    width: 350px;
+    top: 100px;
+    left: calc(50% - 175px);
+    position: absolute;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  #eventTitleInput {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px gray;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  #eventEndTimeInput {
+    padding: 10px;
+    width: 80%;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px gray;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  #eventStartTimeInput {
+    padding: 10px;
+    width: 80%;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px gray;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  #eventNotesInput {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px gray;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  #eventLocationInput {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px gray;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  #eventTitleInput.error {
+    border: 2px solid red;
+  }
+  #eventStartTimeInput.error {
+    border: 2px solid red;
+  }
+  #eventEndTimeInput.error {
+    border: 2px solid red;
+  }
+  .largerEvent.delete {
+    border: 2px solid red;
+  }
+  #dailyViewCancelButton, #cancelDeleteSingleEvent, #cancelButton{
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #cc6363;
+  }
+  #saveButton {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #92a1d1;
+  }
+  #addEventButton{
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #7bc373;
+  }
+  #eventText {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+  }
+  #modalBackDrop {
+    display: none;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
